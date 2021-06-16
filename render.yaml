@@ -3,6 +3,7 @@ services:
     name: blitzapp
     env: node
     plan: starter
+    region: frankfurt
     buildCommand: yarn --frozen-lockfile --prod=false &&
       blitz build &&
       blitz prisma migrate deploy
@@ -20,3 +21,4 @@ services:
 databases:
   - name: blitzapp-db
     plan: starter
+    region: frankfurt
